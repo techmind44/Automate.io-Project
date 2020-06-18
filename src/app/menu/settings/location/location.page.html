@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot='start'>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Location</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Location: </ion-label>
+      <ion-input type='text' [(ngModel)]='location' name='location' placeholder='Enter suburb/city/state here'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Postcode: </ion-label>
+      <ion-input type='tel' inputmode='tel' [(ngModel)]='postcode' maxlength=5 name='postcode' placeholder='Enter postcode here'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox [(ngModel)]='locationTick'></ion-checkbox>Show my location
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand='block' (click)='saveLocation()'>Save</ion-button>
+  <ion-button expand='block' color='medium' routerLink='/menu/settings'>Cancel</ion-button>
+
+</ion-content>

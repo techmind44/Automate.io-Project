@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Settings</ion-title>
+    <ion-buttons slot='start'>
+      <ion-menu-button auto-hide='false'></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id='overview'>
+    <div id='photo-container'>
+      <img src={{displayPic}} id='user-photo'/>
+    </div>
+    <ion-list class='user-details-container'>
+      <ion-item class='user-details'>{{ username }}</ion-item>
+      <ion-item class='user-details'>{{ firstname }} {{ lastname }}</ion-item>
+      <ion-item class='user-details'>{{ email }}</ion-item>
+      <ion-item class='user-details' *ngIf='location'>{{ location }} {{ postcode }}</ion-item>
+    </ion-list>
+  </div>
+
+  <hr>
+
+  <ion-list>
+    <ion-item>
+      <ion-icon name='image'></ion-icon>Upload photo
+      <input type='file' #displaypic accept='image/*'>
+      <ion-button expand='block' *ngIf='displaypic' (click)='changePic(displaypic.files)'>Set as display picture</ion-button>
+
+    </ion-item>
+
+    <ion-item routerLink='./userdetails'>
+      <ion-icon name='create'></ion-icon>
+      <ion-label>Edit Details</ion-label>
+    </ion-item>
+
+    <ion-item routerLink='./location'>
+      <ion-icon name='location'></ion-icon>
+      <ion-label>Location</ion-label>
+    </ion-item>
+
+    <ion-item routerLink='./appusage'>
+      <ion-icon name='stats-chart'></ion-icon>
+      <ion-label>App Usage</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

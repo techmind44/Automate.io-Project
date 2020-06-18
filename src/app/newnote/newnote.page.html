@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ header }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-input type='text' [(ngModel)]='title' name='noteTitle' placeholder='Enter note title'></ion-input>
+    </ion-item>
+    
+    <ion-textarea type='text' [(ngModel)]='content' name='noteContent' placeholder='Enter note here'></ion-textarea>
+
+    <img src={{image}} id='noteImage'/>
+
+    <hr>
+
+    <ion-item>
+      <ion-icon name='bookmark'></ion-icon>
+      <ion-input type='text' [(ngModel)]='label' name='label' placeholder='Add label here'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='image'></ion-icon>
+      <input type='file' #noteImage accept='image/*' (change)='insertImage(noteImage.files)'>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand='block' (click)='saveNote()'>{{ button }}</ion-button>
+  <ion-button expand='block' (click)='cancel()' color='medium'>Cancel</ion-button>
+</ion-content>

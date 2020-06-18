@@ -1,0 +1,7 @@
+{
+  "name": "noteJournalApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

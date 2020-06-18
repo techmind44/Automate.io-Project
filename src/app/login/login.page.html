@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-input type='text' [(ngModel)]='username' name='username' placeholder='Enter username'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type='password' [(ngModel)]='password' name='password' placeholder='Enter password'></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-checkbox [(ngModel)]='checkbox' checked='false' name='checkbox'></ion-checkbox>Stay logged in
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand='block' (click)='login()'>Login</ion-button>
+
+  <p style='text-align: center;'>New user?</p>
+  <ion-button expand='block' color='success'>Create new account</ion-button>
+</ion-content>

@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot='start'>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>App Usage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <canvas #freqchart height='300'></canvas>
+
+  <ion-input type='tel' [(ngModel)]='notesamount' inputmode='tel' name='notesamount' placeholder='How many notes did you create today?'></ion-input>
+  <ion-button expand='block' (click)='addData()'>Log today's note</ion-button>
+</ion-content>

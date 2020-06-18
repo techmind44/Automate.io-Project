@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot='start'>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id='details'>
+    <ion-list>
+      <ion-item>
+        <ion-label>First name: </ion-label>
+        <ion-input type='text' [(ngModel)]='firstName' name='firstName' placeholder='Jane'></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Last name: </ion-label>
+        <ion-input type='text' [(ngModel)]='lastName' name='lastName' placeholder='Doe'></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Email address: </ion-label>
+        <ion-input type='email' [(ngModel)]='email' name='email' placeholder='some_email@domain.com'></ion-input>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div id='birthdate'>
+    <ion-item>
+      <ion-label>Date of Birth: </ion-label>
+      <ion-datetime [(ngModel)]='dob' displayFormat='D MMM, YYYY' placeholder='01 Jan, 2020'></ion-datetime>
+    </ion-item>
+  </div>
+
+  <ion-button expand='block' (click)='saveChanges()'>Save</ion-button>
+  <ion-button expand='block' color='medium' routerLink='/menu/settings'>Cancel</ion-button>
+</ion-content>

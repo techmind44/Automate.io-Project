@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p>
+    Welcome to NoteJournal app!
+    <br>
+    You can use this app to take notes, add images labels to your notes, and mark them as favorites. When you don't need
+    them anymore, you can just delete them.
+    <br>
+    You can also personalize the app by adding some of your details, like name and location.
+    <br>
+    Happy note-taking!
+  </p>
+
+  <ion-item>
+    <ion-checkbox [(ngModel)]='welcomeCheckbox'></ion-checkbox>Don't show again
+  </ion-item>
+  <ion-button expand='block' (click)='closeWelcome()'>Continue</ion-button>
+
+</ion-content>
